@@ -28,8 +28,8 @@ ul {
 
 .header button {
   position: absolute;
-  right: 18%;
-  margin-top: -30px;
+  right: 19%;
+  margin-top: -45px;
 } 
 
 .header i {
@@ -39,6 +39,7 @@ ul {
 .title {
   margin-top: 40px;
   width: 60%;
+  margin-bottom:80px;
 }
 
 .textNew {
@@ -88,6 +89,16 @@ button {
   height:max-content;
   background-color:beige;
   margin:20px;
+}
+
+#footer {
+  position: fixed;
+  height: 60px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .divLi span {

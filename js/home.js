@@ -1,6 +1,7 @@
 var count=0;
 var div = document.getElementById('users')
 var user = 0
+itensDB = []
 
 getUsers()
 
@@ -18,15 +19,24 @@ function getUsers(){
                     +   '<div class="card-body usuario text-center ">'
                     +   '<b>Usuário ' + send[count].userId +'</b>'
                     +   '<br><hr>'
-                    +   '<a class="col-md-12" href=list.html><button class="btn btn-success col-md-12">To-Do\'s Usuário '+ send[count].userId +'</button></a>'
+                    +   '<a class="col-md-12" href=list.html><button class="btn btn-success col-md-12" onclick="saveid('+send[count].userId+')">To-Do\'s Usuário '+ send[count].userId +'</button></a>'
                     +   '</div>'
                     +'</div>'
                 )
             }
+            if (localStorage.length == 0) {
+                if (itensDB.length >= 210) {
+                    alert('Limite máximo de 210 itens atingido!')
+                }
+                itensDB.push({'userId': send[count].userId , 'item': send[count].title, 'status': send[count].completed })
+                localStorage.setItem('todolist', JSON.stringify(itensDB))
+            }
+
             count = count+1
         }
     })
-    
+}
 
-
+function saveid(id){
+   localStorage.setItem("usuarioId", id);
 }
