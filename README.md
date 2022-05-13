@@ -9,4 +9,8 @@ Eu sou Guilherme Picoli dos Santos, e desenvolvi com HTML, CSS, JS e Bootstrap, 
 
 Para testar, basta baixar o zip deste repositório, descompactá-lo, e abrir o endereço da pasta do mesmo, no seu navegador preferido, visando preferencialmente (mas não obrigatoriamente) o arquivo home.html.
 
+Os dados editados se manterão em sua janela enquanto a mesma esiver aberta. 
+Outra janela aberta paralelamente irá recarregar os To-Do's do zero, e visualizará os mesmos, enquanto a sua primeira janela ainda manterá suas atualizações.
+Os To-Do's são carregados no primeiro carregamento da home.html, indicando flag na variável "charge", permitindo que você trafegue livremente e dê f5 sem sobrescrever as suas mudanças.
+
 Obrigado pela visita, divirtam-se. :D
