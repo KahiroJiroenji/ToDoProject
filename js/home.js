@@ -1,11 +1,18 @@
-var count=0;
 var div = document.getElementById('users')
 var user = 0
+var charge = 0
+var count = 0
 itensDB = []
+
+if (JSON.parse(localStorage.getItem('todolist'))){
+    charge += 1
+}
 
 getUsers()
 
 function getUsers(){
+
+    console.log(charge)
     fetch('https://jsonplaceholder.typicode.com/todos').then((retorno)=>{
 
         return retorno.json();
@@ -24,16 +31,18 @@ function getUsers(){
                     +'</div>'
                 )
             }
-            // if (localStorage.length == 0) {
+            if (charge == 0) {
                 if (itensDB.length >= 210) {
                     alert('Limite máximo de 210 itens atingido!')
                 }
                 itensDB.push({'userId': send[count].userId , 'item': send[count].title, 'status': send[count].completed })
                 localStorage.setItem('todolist', JSON.stringify(itensDB))
-            // }
+            }
 
             count = count+1
         }
+        charge = charge+1
+        console.log(charge)
     })
 }
 
