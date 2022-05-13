@@ -24,13 +24,13 @@ function getUsers(){
                     +'</div>'
                 )
             }
-            if (localStorage.length == 0) {
+            // if (localStorage.length == 0) {
                 if (itensDB.length >= 210) {
                     alert('Limite máximo de 210 itens atingido!')
                 }
                 itensDB.push({'userId': send[count].userId , 'item': send[count].title, 'status': send[count].completed })
                 localStorage.setItem('todolist', JSON.stringify(itensDB))
-            }
+            // }
 
             count = count+1
         }
