@@ -7,6 +7,6 @@ Eu sou Guilherme Picoli dos Santos, e desenvolvi com HTML, CSS, JS e Bootstrap, 
 4 - Esta página permite adicionar um novo item no TO-DO list deste usuário; assim como marcar uma tarefa como concluída ou pendente; também permite a exclusão de todas as tarefas atribuídas a este usuário.
 
 
-Para testar, basta baixar o zip deste repositório, descompactá-lo, e abrir o endereço de sua pasta no navegador, visando a home.html de preferência.
+Para testar, basta baixar o zip deste repositório, descompactá-lo, e abrir o endereço da pasta do mesmo, no seu navegador preferido, visando preferencialmente (mas não obrigatoriamente) o arquivo home.html.
 
 Obrigado pela visita, divirtam-se. :D
