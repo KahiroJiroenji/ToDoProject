@@ -84,6 +84,12 @@ button {
   align-items: center;
 }
 
+.usuario{
+  height:max-content;
+  background-color:beige;
+  margin:20px;
+}
+
 .divLi span {
   width: 80%;
   color: dimgray;
