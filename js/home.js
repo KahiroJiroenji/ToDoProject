@@ -4,7 +4,7 @@ var charge = 0
 var count = 0
 itensDB = []
 
-if (JSON.parse(localStorage.getItem('todolist'))){
+if (JSON.parse(sessionStorage.getItem('todolist'))){
     charge += 1
 }
 
@@ -36,7 +36,7 @@ function getUsers(){
                     alert('Limite máximo de 210 itens atingido!')
                 }
                 itensDB.push({'userId': send[count].userId , 'item': send[count].title, 'status': send[count].completed })
-                localStorage.setItem('todolist', JSON.stringify(itensDB))
+                sessionStorage.setItem('todolist', JSON.stringify(itensDB))
             }
 
             count = count+1
@@ -47,5 +47,5 @@ function getUsers(){
 }
 
 function saveid(id){
-   localStorage.setItem("usuarioId", id);
+    sessionStorage.setItem("usuarioId", id);
 }
