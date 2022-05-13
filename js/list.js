@@ -2,7 +2,7 @@ const texto = document.querySelector('input')
 const btnNew = document.querySelector('.divNew button')
 const btnDeleteAll = document.querySelector('.header button')
 const ul = document.querySelector('ul')
-const usuarioId = localStorage.getItem("usuarioId")
+const usuarioId = sessionStorage.getItem("usuarioId")
 
 var itensDB = []
 
@@ -18,9 +18,9 @@ var itensDB = []
 // Já este, deleta apenas as entradas que possuirem o userId referido
 
 btnDeleteAll.onclick = () => {
-  var items = JSON.parse(localStorage.getItem('todolist'));
+  var items = JSON.parse(sessionStorage.getItem('todolist'));
   var filtered = items.filter(item => item.userId != usuarioId)
-  localStorage.setItem('todolist', JSON.stringify(filtered));
+  sessionStorage.setItem('todolist', JSON.stringify(filtered));
   loadItens()
 }
 
@@ -47,13 +47,13 @@ function setItemDB() {
 }
 
 function updateDB() {
-  localStorage.setItem('todolist', JSON.stringify(itensDB))
+  sessionStorage.setItem('todolist', JSON.stringify(itensDB))
   loadItens()
 }
 
 function loadItens() {
   ul.innerHTML = "";
-  itensDB = JSON.parse(localStorage.getItem('todolist')) ?? []
+  itensDB = JSON.parse(sessionStorage.getItem('todolist')) ?? []
   itensDB.forEach((item, i) => {
     if(item.userId == usuarioId){
       insertItemTela(item.item, item.status, i)
